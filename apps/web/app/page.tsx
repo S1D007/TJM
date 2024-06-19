@@ -2,7 +2,6 @@
 import React from "react";
 import { SparklesCore } from "@/components/ui/Sparkle";
 import { FlipWords } from "@/components/ui/FlipWords";
-import ShrimerButton from "@/components/ui/Buttons/ShrimerButton";
 
 function page() {
   const words = [
@@ -34,9 +33,7 @@ function page() {
       <FlipWords
         className="md:text-3xl text-2xl lg:text-5xl font-medium lowercase"
         words={words}
-      />{" "}
-      <br />
-      <ShrimerButton>Get Started</ShrimerButton>
+      />
     </div>
   );
 }
