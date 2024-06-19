@@ -1,102 +1,45 @@
-import Image from "next/image";
-import { Button } from "@repo/ui/button";
-import styles from "./page.module.css";
+"use client";
+import React from "react";
+import { SparklesCore } from "@/components/ui/Sparkle";
+import { FlipWords } from "@/components/ui/FlipWords";
+import { HoverBorderGradient } from "@/components/ui/Buttons/GradientButton";
+import ShrimerButton from "@/components/ui/Buttons/ShrimerButton";
 
-export default function Home() {
+function page() {
+  const words = [
+    "Write your Feelings.",
+    "Express to the World.",
+    "Learn from other's mistakes.",
+  ];
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+    <div className="h-dvh w-full bg-black flex flex-col items-center justify-center overflow-hidden">
+      <h1 className="md:text-7xl text-5xl lg:text-9xl font-bold text-center text-white relative z-50">
+        The Journal Me
+      </h1>
+      <div className="w-[40rem] h-40 relative">
+        <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
+        <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
+        <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-sm" />
+        <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
+        <SparklesCore
+          id="tsparticlesfullpage"
+          background="transparent"
+          minSize={0.4}
+          maxSize={1}
+          particleDensity={1000}
+          className="w-full h-full"
+          particleColor="#FFFFFF"
         />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.tsx</code>
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-        <Button
-          appName="web"
-          className="mx-auto rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-        >
-          Open alert
-        </Button>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file-text.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
+      </div>
+      <FlipWords
+        className="md:text-3xl text-2xl lg:text-5xl font-medium lowercase"
+        words={words}
+      />{" "}
+      <br />
+      <ShrimerButton>Get Started</ShrimerButton>
     </div>
   );
 }
+
+export default page;
