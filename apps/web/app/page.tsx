@@ -2,7 +2,6 @@
 import React from "react";
 import { SparklesCore } from "@/components/ui/Sparkle";
 import { FlipWords } from "@/components/ui/FlipWords";
-import { HoverBorderGradient } from "@/components/ui/Buttons/GradientButton";
 import ShrimerButton from "@/components/ui/Buttons/ShrimerButton";
 
 function page() {
