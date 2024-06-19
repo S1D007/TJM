@@ -31,7 +31,7 @@ function page() {
         <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
       </div>
       <FlipWords
-        className="md:text-3xl text-2xl lg:text-5xl font-medium lowercase"
+        className="text-white md:text-3xl text-2xl lg:text-5xl font-medium lowercase"
         words={words}
       />
     </div>
